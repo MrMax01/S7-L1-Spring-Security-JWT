@@ -80,4 +80,9 @@ public class UsersService {
         return found.getAvatarURL();
     }
 
+    public User findByEmail(String email){
+        return usersRepository.findByEmail(email)
+                .orElseThrow(() -> new NotFoundException("Utente con email " + email + " non trovato!"));
+    }
+
 }
