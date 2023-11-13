@@ -24,5 +24,6 @@ public class User {
     private String avatarURL;
     @OneToMany(mappedBy = "user")
     private List<Device> listDevice ;
+    private String password;
 
 }
